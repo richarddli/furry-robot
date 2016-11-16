@@ -15,10 +15,12 @@ Example 1: External service
 
 Imagine you're using Stripe's Payment API to make a charge in your code. In your Mintaro file, you could write this:
 
+```
 method stripe.Charge.create() {
   max_latency = 100ms
   max_error_rate = 1%
 }
+```
 
 Mintaro would then alert you if either of these limits were encountered during a Charge.create().
 
@@ -29,6 +31,8 @@ Let's say you don't want to use Mintaro. What are your choices?
 
 * You could use an API monitoring solution such as Runscope. However, Runscope will only execute a synthetic transaction against the Stripe API -- it's not your actual code that's running.
 * You could write your own custom wrapper around your RPC that tracks latency. But don't you have better things to do?
+
+[WIP below]
 
 Quick start
 -----------
